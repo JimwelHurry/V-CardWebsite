@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover; /* Ensure the background covers the full viewport */
+}
+
+.container {
+  display: flex;
+  flex-direction: row; /* Arrange cards in a row */
+  justify-content: space-around; /* Space between cards */
+  align-items: stretch; /* Stretch cards to be equal height */
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+}
+
+.contact-card {
+  flex: 1; /* Allow the card to grow */
+  max-width: 400px; /* Maximum width */
+  min-height: 600px; /* Minimum height */
+  text-align: center;
+  border: 2px solid #007bff; /* Border color */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light gray background for the card */
+  padding: 30px; /* Increased padding */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  margin: 10px; /* Space around the card */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Arrange children in a column */
+  justify-content: flex-start; /* Align items to the top */
+  overflow-y: auto; /* Enable vertical scrolling */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.contact-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.large-card {
+  flex: 2; /* Allow the content card to grow more */
+  padding: 20px;
+  border: 2px solid #007bff; /* Border for large card */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light gray background for the large card */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  margin: 10px; /* Space around the card */
+  overflow-y: auto; /* Enable vertical scrolling */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.large-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.contact-info {
+  margin-top: 20px; /* Space above contact info */
+  line-height: 1.6; /* Increased line height for readability */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center icons */
+  margin-top: 10px; /* Space above icons */
+}
+
+.social-icons a {
+  margin: 0 10px; /* Space between icons */
+  color: #007bff; /* Icon color */
+  font-size: 20px; /* Size of icons */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.social-icons a:hover {
+  color: #0056b3; /* Darker color on hover */
+  transform: scale(1.2); /* Grow effect on hover */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around; /* Distribute links evenly */
+  margin-bottom: 20px; /* Space below navbar */
+}
+
+.navbar a {
+  text-decoration: none; /* Remove underline */
+  color: #007bff; /* Link color */
+  padding: 10px; /* Padding around links */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.navbar a:hover {
+  color: #0056b3; /* Darker color on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Section Styling */
+.section {
+  display: none; /* Hide sections by default */
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 0.5s forwards; /* Fade-in effect */
+}
+
+.fade-in {
+  opacity: 1; /* Fully visible */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.profile-pic {
+  width: 160px; /* Increased width */
+  height: 160px; /* Increased height */
+  border-radius: 0; /* Remove the circular effect */
+  object-fit: cover; /* Ensure the image covers the box without distortion */
+}
